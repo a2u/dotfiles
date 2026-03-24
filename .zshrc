@@ -1,5 +1,7 @@
+cat ~/.motd
+
 # Source zsh plugins
-source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244,bold' 
 
