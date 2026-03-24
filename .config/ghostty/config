@@ -1,0 +1,15 @@
+# --- Theme and Colors ---
+theme = Twilight
+
+# --- Window and Appearance ---
+macos-titlebar-style = hidden
+macos-non-native-fullscreen = true
+background-opacity = 0.85
+background-blur-radius = 30
+window-padding-x = 10
+window-padding-y = 8
+window-save-state = always
+window-theme = auto
+
+# --- Shell Integration ---
+shell-integration = zsh

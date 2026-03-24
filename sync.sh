@@ -9,12 +9,29 @@ DOTFILES=(
   .zshrc
 )
 
+# List of dotfile directories to track
+DOTFILE_DIRS=(
+  .config/neofetch
+  .config/ghostty
+)
+
 echo "==> Copying dotfiles to repo..."
 for f in "${DOTFILES[@]}"; do
   src="$HOME_DIR/$f"
   if [ -f "$src" ]; then
     cp "$src" "$DOTFILES_DIR/$f"
     echo "  Copied $f"
+  else
+    echo "  WARNING: $src not found, skipping"
+  fi
+done
+
+for d in "${DOTFILE_DIRS[@]}"; do
+  src="$HOME_DIR/$d"
+  if [ -d "$src" ]; then
+    mkdir -p "$DOTFILES_DIR/$d"
+    cp -r "$src/." "$DOTFILES_DIR/$d/"
+    echo "  Copied $d/"
   else
     echo "  WARNING: $src not found, skipping"
   fi
